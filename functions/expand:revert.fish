@@ -1,0 +1,1 @@
+/Users/iori_matsuda/.config/fisherman/expand/functions/expand:revert.fish

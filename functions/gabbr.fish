@@ -1,0 +1,1 @@
+/Users/iori_matsuda/.config/fisherman/global-abbreviation/functions/gabbr.fish

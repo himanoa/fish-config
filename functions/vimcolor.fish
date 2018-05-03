@@ -1,0 +1,1 @@
+/Users/iori_matsuda/.config/fisherman/vimcolor/functions/vimcolor.fish

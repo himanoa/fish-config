@@ -1,0 +1,1 @@
+/Users/iori_matsuda/.config/fisherman/getopts/getopts.fish

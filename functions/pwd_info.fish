@@ -1,0 +1,1 @@
+/Users/iori_matsuda/.config/fisherman/pwd_info/pwd_info.fish

@@ -1,0 +1,1 @@
+/Users/iori_matsuda/.config/fisherman/z/conf.d/z.fish
