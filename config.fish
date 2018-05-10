@@ -2,13 +2,11 @@ set -x GOPATH $HOME
 set -x WINEARCH win32
 set -x XDG_CONFIG_DIRS ~/.config
 set -x PATH $HOME/.anyenv/bin $PATH
-set -x PATH /home/himanoa/Downloads/google-cloud-sdk/bin $PATH
 set -x PATH $HOME/.cargo/bin $PATH
 set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x PATH $GOPATH/bin $PATH
 set -x DIRENV_ nvim
 set -x EDITOR vim
-set -x PATH $HOME/src/github.com/k0kubun/Nocturn/packages/v1.6.1/Nocturn-linux-x64 $PATH
 
 alias gst='git status'
 alias ga='git add'
@@ -70,5 +68,4 @@ function fish_user_key_bindings
 end
 
 eval (direnv hook fish)
-
-status --is-interactive; and source (anyenv init -|psub)
+source (anyenv init - fish|psub)
