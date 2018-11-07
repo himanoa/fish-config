@@ -1,1 +1,0 @@
-/Users/iori_matsuda/.config/fisherman/argu/functions/argu.fish

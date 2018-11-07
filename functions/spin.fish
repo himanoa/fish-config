@@ -1,1 +1,0 @@
-/Users/iori_matsuda/.config/fisherman/spin/spin.fish

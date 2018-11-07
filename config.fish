@@ -14,58 +14,7 @@ alias gc='git commit'
 alias g ='git'
 alias vim='nvim'
 alias weather='curl -4 http://wttr.in/Tokyo'
-function git-hash
-    git log --oneline --branches | fzf-tmux | awk '{print $1}'
-end
 
-
-function fzf-tmux_select_file
-    if ls .git
-        if set -q $argv
-            git ls-files | fzf-tmux | read line; commandline "vim $line"
-        else
-            git ls-files | fzf-tmux | read line; commandline "vim $line"
-        end
-    else
-        if set -q $argv
-            find . -print | fzf-tmux | read line; commandline "vim $line"
-        else
-            find . -print | fzf-tmux | read line; commandline "vim $line"
-        end
-    end
-end
-
-function fzf-tmux_select_repository
-    if set -q $argv
-        ghq list -p | fzf-tmux | read line; commandline "cd $line"
-    else
-        ghq list -p | fzf-tmux --query $argv | read line; commandline "cd $line"
-    end
-end
-
-function fzf-tmux_select_history
-    if set -q $argv
-        history |  fzf-tmux | read line; commandline $line
-    else
-        history | fzf-tmux --query $argv | read line; commandline $line
-    end
-end
-
-function fzf-tmux_select_branch
-   git branch -a | fzf-tmux | tr -d ' ' | read branch
-   if [ $branch ]
-       commandline "git checkout $branch"
-   else
-       commandline "git checkout $branch"
-   end
-end
-
-function fish_user_key_bindings
-    bind \cr fzf-tmux_select_history
-    bind \c] fzf-tmux_select_repository
-    bind \cb fzf-tmux_select_branch
-    bind \cf fzf-tmux_select_file
-end
-
-eval (direnv hook fish)
-source (anyenv init - fish|psub)
+set -U FZF_LEGACY_KEYBINDINGS 0
+bind \cb '__fzf_ghq'
+bind \co '__fzf_ghq'

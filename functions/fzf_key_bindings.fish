@@ -1,1 +1,0 @@
-/home/himanoa/.fzf/shell/key-bindings.fish

@@ -1,9 +1,3 @@
-oh-my-fish/plugin-argu
-oh-my-fish/plugin-expand
-fisherman/getopts
-ryotako/fish-global-abbreviation
-fisherman/last_job_id
-fisherman/pwd_info
-fisherman/spin
-ryotako/fish-vimcolor
-fisherman/z
+fzf
+fisherman/fzf
+jethrokuan/fzf
