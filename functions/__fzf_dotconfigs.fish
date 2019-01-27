@@ -1,9 +1,9 @@
-function __fzf_ghq
+function __fzf_dotconfigs
     set -q FZF_TMUX; or set FZF_TMUX 0
     set -q FZF_TMUX_HEIGHT; or set FZF_TMUX_HEIGHT 40%
     if [ $FZF_TMUX -eq 1 ]
-        cd (ghq root)/(ghq list | fzf-tmux -d $FZF_TMUX_HEIGHT)
+        cd ~/.config/(ls -F ~/.config | grep / | fzf-tmux)
     else
-        cd (ghq root)/(ghq list | fzf)
+        cd ~/.config/(ls -F ~/.config | grep / | fzf)
     end
 end

@@ -16,5 +16,11 @@ alias vim='nvim'
 alias weather='curl -4 http://wttr.in/Tokyo'
 
 set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_TMUX 1
+set -U FZF_COMPLETE 1
+set -U FZF_1
 bind \cb '__fzf_ghq'
 bind \co '__fzf_ghq'
+
+status --is-interactive; and source (anyenv init -|psub)
+alias ggra="git log --graph --oneline --decorate=short --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cgreen%h %C(yellow)%cd %Cred%d %Creset%s %Cblue<%cn>'"
