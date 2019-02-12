@@ -24,3 +24,4 @@ bind \co '__fzf_ghq'
 
 status --is-interactive; and source (anyenv init -|psub)
 alias ggra="git log --graph --oneline --decorate=short --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cgreen%h %C(yellow)%cd %Cred%d %Creset%s %Cblue<%cn>'"
+eval (direnv hook fish)
