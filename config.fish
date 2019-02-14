@@ -7,6 +7,8 @@ set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x PATH $GOPATH/bin $PATH
 set -x DIRENV_ nvim
 set -x EDITOR vim
+set -x NAME himanoa
+set -x EMAIL matsunoappy@gmail.com
 
 alias gst='git status'
 alias ga='git add'
