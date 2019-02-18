@@ -13,6 +13,8 @@ set -x EMAIL matsunoappy@gmail.com
 alias gst='git status'
 alias ga='git add'
 alias gc='git commit'
+alias gcf='git commit --fixup'
+alias gcfh='git commit --fixup HEAD'
 alias g ='git'
 alias vim='nvim'
 alias weather='curl -4 http://wttr.in/Tokyo'
