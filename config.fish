@@ -7,6 +7,8 @@ set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x PATH $GOPATH/bin $PATH
 set -x DIRENV_ nvim
 set -x EDITOR vim
+set -x NAME himanoa
+set -x EMAIL matsunoappy@gmail.com
 
 alias gst='git status'
 alias ga='git add'
@@ -14,6 +16,7 @@ alias gc='git commit'
 alias g ='git'
 alias vim='nvim'
 alias weather='curl -4 http://wttr.in/Tokyo'
+alias touch='touch_erb'
 
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_TMUX 1
