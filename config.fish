@@ -19,6 +19,7 @@ alias g ='git'
 alias vim='nvim'
 alias weather='curl -4 http://wttr.in/Tokyo'
 alias touch='touch_erb'
+alias vimf='vim (rg --files | fzf-tmux)'
 
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_TMUX 1
