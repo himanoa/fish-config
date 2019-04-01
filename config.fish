@@ -3,6 +3,7 @@ set -x WINEARCH win32
 set -x XDG_CONFIG_DIRS ~/.config
 set -x PATH $HOME/.anyenv/bin $PATH
 set -x PATH $HOME/.cargo/bin $PATH
+set -x PATH $HOME/.config/composer/vendor/bin $PATH
 set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x PATH $GOPATH/bin $PATH
 set -x DIRENV_ nvim
@@ -36,3 +37,5 @@ eval (direnv hook fish)
 function cd
   builtin cd $argv[1]; and tmux rename-window (basename (pwd))
 end
+
+alias x='env LANG=en_US.UTF-8 startx'
