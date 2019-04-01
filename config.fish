@@ -32,10 +32,11 @@ bind \co '__fzf_ghq'
 
 status --is-interactive; and source (anyenv init -|psub)
 alias ggra="git log --graph --oneline --decorate=short --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cgreen%h %C(yellow)%cd %Cred%d %Creset%s %Cblue<%cn>'"
+alias c="tmux choose-tree -w"
 eval (direnv hook fish)
 
-function cd
-  builtin cd $argv[1]; and tmux rename-window (basename (pwd))
+function change_tmux_window_name -e "fish_postexec"
+  tmux rename-window (basename (pwd))
 end
 
 alias x='env LANG=en_US.UTF-8 startx'
