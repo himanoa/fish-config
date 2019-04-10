@@ -1,4 +1,5 @@
 set -x GOPATH $HOME
+set -x PATH $HOME/bin $PATH
 set -x WINEARCH win32
 set -x XDG_CONFIG_DIRS ~/.config
 set -x PATH $HOME/.anyenv/bin $PATH
