@@ -13,6 +13,7 @@ set -x NAME himanoa
 set -x EMAIL matsunoappy@gmail.com
 
 alias gst='git status'
+alias nr='npm run'
 alias ga='git add'
 alias gc='git commit'
 alias gcf='git commit --fixup'
