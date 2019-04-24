@@ -24,6 +24,7 @@ alias weather='curl -4 http://wttr.in/Tokyo'
 alias touch='touch_erb'
 alias vimf='vim (rg --files | fzf-tmux)'
 alias review='tig --reverse -w (git merge-base origin/master HEAD)...HEAD'
+alias packs='cd (lerna list --json | jq -r ".[] | .location" | fzf-tmux)'
 
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_TMUX 1
