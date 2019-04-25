@@ -1,2 +1,2 @@
 bind \cq __fzf_ghq
-bind \cn __fzf_dotconfigs
+bind \c] __fzf_dotconfigs
