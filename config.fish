@@ -26,12 +26,9 @@ alias vimf='vim (rg --files | fzf-tmux)'
 alias review='tig --reverse -w (git merge-base origin/master HEAD)...HEAD'
 alias packs='cd (lerna list --json | jq -r ".[] | .location" | fzf-tmux)'
 
-set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_TMUX 1
 set -U FZF_COMPLETE 1
 set -U FZF_1
-bind \cb '__fzf_ghq'
-bind \co '__fzf_ghq'
 
 status --is-interactive; and source (anyenv init -|psub)
 alias ggra="git log --graph --oneline --decorate=short --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cgreen%h %C(yellow)%cd %Cred%d %Creset%s %Cblue<%cn>'"
@@ -43,3 +40,4 @@ function change_tmux_window_name -e "fish_postexec"
 end
 
 alias x='env LANG=en_US.UTF-8 startx'
+set -U FZF_LEGACY_KEYBINDINGS 1
